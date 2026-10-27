@@ -5,7 +5,8 @@ código 100% propio, reimplementación clean-room — con DSP multihilo real, UI
 GPU (ImGui/Vulkan) y compatibilidad con proyectos `.flp` y plugins VST3/CLAP.
 
 **Antes de tocar nada:** lee `AGENTS.md` (reglas clean-room, no negociables) y el
-Documento Maestro del proyecto en `V:\ObsidianVault\14-Iron3D-CoalMix\Iron3D_CoalMix_Documento_Maestro.md`.
+Documento Maestro del proyecto en `V:\ObsidianVault\14-Iron3D-CoalMix\Iron3D_CoalMix_Documento_Maestro_2026-10-27.pdf`
+(resumen en `estado.md` de esa misma carpeta).
 
 Estado: fase de diseño (2026-10-27). Sin código todavía. Decisión pendiente antes del
 primer commit: RtAudio (ligero, MIT OR Apache-2.0) frente a JUCE (host de plugins/MIDI
