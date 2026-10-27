@@ -1,0 +1,8 @@
+build/
+cmake-build-*/
+.vs/
+*.obj
+*.exe
+*.pdb
+__pycache__/
+*.pyc

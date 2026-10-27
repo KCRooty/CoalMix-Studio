@@ -1,0 +1,37 @@
+# CoalMix Studio
+
+DAW open source (Static Forge) que replica el flujo de trabajo de FL Studio 21 —
+código 100% propio, reimplementación clean-room — con DSP multihilo real, UI en
+GPU (ImGui/Vulkan) y compatibilidad con proyectos `.flp` y plugins VST3/CLAP.
+
+**Antes de tocar nada:** lee `AGENTS.md` (reglas clean-room, no negociables) y el
+Documento Maestro del proyecto en `V:\ObsidianVault\14-Iron3D-CoalMix\Iron3D_CoalMix_Documento_Maestro.md`.
+
+Estado: fase de diseño (2026-10-27). Sin código todavía. Decisión pendiente antes del
+primer commit: RtAudio (ligero, MIT OR Apache-2.0) frente a JUCE (host de plugins/MIDI
+completo, pero AGPLv3 y condiciona la licencia de todo el proyecto) — ver AGENTS.md §5.
+
+## Estructura
+
+```
+src/
+  core/             Motor de audio, DSP multihilo, gestor de buffers
+  audio_drivers/    ASIO, WASAPI, PipeWire/JACK, ALSA
+  plugins_host/     VST3 + CLAP en procesos aislados
+  instruments/      CoalSynth3X, CoalWave, CoalSampler
+  fx/               EQ paramétrico, compresor, reverb, delay
+  ui/               Piano Roll, Channel Rack, Playlist, Mixer (ImGui + GPU)
+  flp_importer/     Parser de .flp (referencia: PyFLP)
+docs/formats/       flp.ksy (Kaitai Struct)
+tests/oracle/        Exports MIDI/WAV de FL Studio 21 como referencia
+assets/              Presets, skins e iconos propios
+```
+
+## MVP
+
+Motor de audio con RtAudio/ASIO, Channel Rack, Piano Roll básico, CoalSynth 3X y
+exportación a WAV.
+
+## Licencia
+
+MIT OR Apache-2.0 si se evita JUCE; AGPLv3 (o comercial) si se usa JUCE — por decidir.
