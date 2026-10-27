@@ -8,9 +8,9 @@ GPU (ImGui/Vulkan) y compatibilidad con proyectos `.flp` y plugins VST3/CLAP.
 Documento Maestro del proyecto en `V:\ObsidianVault\14-Iron3D-CoalMix\Iron3D_CoalMix_Documento_Maestro_2026-10-27.pdf`
 (resumen en `estado.md` de esa misma carpeta).
 
-Estado: fase de diseño (2026-10-27). Sin código todavía. Decisión pendiente antes del
-primer commit: RtAudio (ligero, MIT OR Apache-2.0) frente a JUCE (host de plugins/MIDI
-completo, pero AGPLv3 y condiciona la licencia de todo el proyecto) — ver AGENTS.md §5.
+Estado: fase de diseño (2026-10-27). Sin código todavía. Stack de audio/plugins/MIDI:
+**JUCE** (decisión de Core, 2026-10-27) → licencia del proyecto **AGPLv3**. UI en
+ImGui/Vulkan de todos modos, JUCE solo para audio — ver AGENTS.md §5 y §7.
 
 ## Estructura
 
@@ -30,9 +30,9 @@ assets/              Presets, skins e iconos propios
 
 ## MVP
 
-Motor de audio con RtAudio/ASIO, Channel Rack, Piano Roll básico, CoalSynth 3X y
+Motor de audio con JUCE/ASIO, Channel Rack, Piano Roll básico, CoalSynth 3X y
 exportación a WAV.
 
 ## Licencia
 
-MIT OR Apache-2.0 si se evita JUCE; AGPLv3 (o comercial) si se usa JUCE — por decidir.
+**AGPLv3** (JUCE la impone). Ver AGENTS.md §7.

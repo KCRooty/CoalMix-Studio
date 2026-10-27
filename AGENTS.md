@@ -39,10 +39,13 @@ tolerancia/espectro).
 
 ## 5. Stack
 
-C++20/23 · CMake · audio: RtAudio (ASIO / WASAPI / PipeWire-JACK / ALSA) · plugins: VST3 + CLAP
-(sin VST2) · UI: Dear ImGui sobre Vulkan · threading con primitivas estándar de C++20.
-Si se usa JUCE: AGPLv3, y condiciona la licencia del proyecto (decidir antes — ver estado.md del
-proyecto en el vault para la decisión tomada).
+C++20/23 · CMake · **JUCE** para audio, host de plugins (VST3 + CLAP, sin VST2) y MIDI
+(decisión de Core, 2026-10-27) · UI: Dear ImGui sobre Vulkan, **no** el sistema de UI de
+JUCE — JUCE se usa solo para audio/plugins/MIDI, nunca para pintar ventanas · threading con
+primitivas estándar de C++20 donde JUCE no las cubra.
+Licencia: **AGPLv3** (JUCE la impone al proyecto entero; la alternativa era la licencia
+comercial de JUCE, de pago — descartada por defecto FOSS-first salvo que Core diga lo
+contrario). Ver §7.
 Windows y Linux con paridad; CI falla si uno de los dos no compila.
 
 ## 6. Calidad
@@ -54,5 +57,7 @@ Windows y Linux con paridad; CI falla si uno de los dos no compila.
 
 ## 7. Licencia
 
-MIT OR Apache-2.0 si se evita JUCE; AGPLv3 (o comercial) si se usa JUCE — decidir antes del primer
-commit, ver estado.md del proyecto en el vault.
+**AGPLv3** (decidido 2026-10-27: CoalMix usa JUCE). Cualquier dependencia nueva debe ser
+compatible con AGPLv3. Si CoalMix se ofrece alguna vez como servicio en red (p. ej. un
+backend de colaboración), la AGPL obliga a publicar el código de ese servicio también —
+tenerlo presente antes de diseñar nada tipo SaaS encima de CoalMix.
