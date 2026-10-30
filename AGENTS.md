@@ -1,6 +1,6 @@
 # AGENTS.md — CoalMix Studio
 
-Reglas obligatorias para cualquier agente (Claude Code, etc.) o colaborador humano.
+Reglas obligatorias para cualquier agente de IA o colaborador humano.
 CoalMix Studio es un DAW open source de Static Forge que replica el flujo de trabajo
 de FL Studio 21 con código propio, y lo mejora.
 
