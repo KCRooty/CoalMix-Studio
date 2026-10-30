@@ -1,4 +1,8 @@
+<img src="assets/logo.png" alt="CoalMix Studio" width="96" height="96">
+
 # CoalMix Studio
+
+**Página del proyecto:** [staticforge.me](https://staticforge.me/#proyectos)
 
 DAW open source (Static Forge) que replica el flujo de trabajo de FL Studio 21 —
 código 100% propio, reimplementación clean-room — con DSP multihilo real, UI en
