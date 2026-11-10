@@ -2,6 +2,11 @@
 
 # CoalMix Studio
 
+> **Proyecto cancelado (2026-11-10).** Este repo queda archivado y no recibirá más
+> cambios. Su sitio en Static Forge lo ocupa
+> [Cinder Studio](https://github.com/KCRooty/Cinder-Studio), un editor de vídeo open
+> source al estilo DaVinci Resolve.
+
 **Página del proyecto:** [staticforge.me](https://staticforge.me/#proyectos)
 
 DAW open source (Static Forge) que replica el flujo de trabajo de FL Studio 21 —
@@ -12,7 +17,7 @@ GPU (ImGui/Vulkan) y compatibilidad con proyectos `.flp` y plugins VST3/CLAP.
 Documento Maestro del proyecto en `V:\ObsidianVault\14-Iron3D-CoalMix\Iron3D_CoalMix_Documento_Maestro_2026-10-27.pdf`
 (resumen en `estado.md` de esa misma carpeta).
 
-Estado: fase de diseño (2026-10-27). Sin código todavía. Stack de audio/plugins/MIDI:
+Estado: cancelado el 2026-11-10, sin llegar a tener código (fase de diseño desde el 2026-10-27). Stack de audio/plugins/MIDI:
 **JUCE** (decisión de Core, 2026-10-27) → licencia del proyecto **AGPLv3**. UI en
 ImGui/Vulkan de todos modos, JUCE solo para audio — ver AGENTS.md §5 y §7.
 
